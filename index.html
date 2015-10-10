@@ -1,0 +1,35 @@
+<!DOCTYPE html SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+        <title>Mark III</title>
+        
+    </head>
+    <body>
+    	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="geo.js"></script>
+<div>
+<p>
+	2020 Oregon St Berkeley, CA 94703 <br>
+	2284 Shattuck Ave Berkeley, CA 94704 <br>
+	2001 Allston Way Berkeley, CA 94704 <br>
+</p>
+<button type="button" onclick="getHighlight()">UBER Extension</button>
+</div>
+
+<script>
+function getHighlight() {
+
+	//console.log("test this button")
+	var text = "";
+    if (window.getSelection) {
+        text = window.getSelection().toString();
+    } else if (document.selection && document.selection.type != "Control") {
+        text = document.selection.createRange().text;
+    }
+    console.log(text)
+}
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+</body>
+</html>
