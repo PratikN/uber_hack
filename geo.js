@@ -13,8 +13,8 @@ function getGeocode(text) {
 
 	        // Add some code to work with myLatLng    
 	        console.log("hey");   
-	        console.log(myLatLng.lat());
-	        console.log(myLatLng.lng());  
+	        console.log("dest lat: ",myLatLng.lat());
+	        console.log("dest long: ", myLatLng.lng());  
 	        var endlat = myLatLng.lat();
 	        var endlng = myLatLng.lng();
 	        dosecond(endlat,endlng)
@@ -31,10 +31,10 @@ function dosecond(var1,var2){
 navigator.geolocation.getCurrentPosition(function(position) {
 
 	//dofirst();
-	console.log("printing arguments");
+/*	console.log("printing arguments");
 	console.log(var1);
 	console.log(var2);
-	console.log("hello");
+	console.log("hello");*/
 	//console.log(position);
     // Update latitude and longitude
     userLatitude = position.coords.latitude;
