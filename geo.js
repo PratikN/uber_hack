@@ -6,7 +6,8 @@ var uberClientId = "nPN1DkEGRwvdl2S9FbhEOy8l5Um-8Js5"
   , uberServerToken = "SRsW_GXhu5CVmoO4eM1VLLRk6p6zkgFl-7XlrY2f" ;
 
 
-	geo.geocode({'address':"6508 dana st berkeley"},function(results, status){
+function getGeocode(text) {
+	geo.geocode({'address':text},function(results, status){
 	    if (status == google.maps.GeocoderStatus.OK) {              
 	        var myLatLng = results[0].geometry.location;
 
@@ -22,7 +23,7 @@ var uberClientId = "nPN1DkEGRwvdl2S9FbhEOy8l5Um-8Js5"
 	        alert("Geocode was not successful for the following reason: " + status);
 	    }
 	});
-	
+}
 
 
 function dosecond(var1,var2){
@@ -68,3 +69,18 @@ function getEstimatesForUserLocation(latitude,longitude, endlat, endlng) {
     }
   });
 }
+
+function getHighlight() {
+
+  //console.log("test this button")
+    //carlo changes
+  var text = "";
+    if (window.getSelection) {
+        text = window.getSelection().toString();
+    } else if (document.selection && document.selection.type != "Control") {
+        text = document.selection.createRange().text;
+    }
+    console.log(text)
+    getGeocode(text)
+}
+
