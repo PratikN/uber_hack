@@ -66,7 +66,22 @@ function getEstimatesForUserLocation(latitude,longitude, endlat, endlng) {
     },
     success: function(result) {
       console.log(result);
-    }
+    //   for(i = 0; i < result.prices.length; i++) {
+
+    //             var x = document.createElement("div");
+    // var t = document.createTextNode(result.prices[i].display_name + " " + result.prices[i].estimate);
+    // //x.setAttribute("style", "background-color: grey;");
+    // x.appendChild(t);
+    // document.body.appendChild(x);
+    // $('#price').html
+                  $('#price1').html(result.prices[0].display_name + " " + result.prices[0].estimate);
+                  $('#price2').html(result.prices[1].display_name + " " + result.prices[1].estimate);
+                  $('#price3').html(result.prices[2].display_name + " " + result.prices[2].estimate);
+                  $('#price4').html(result.prices[3].display_name + " " + result.prices[3].estimate);
+                  $('#price5').html(result.prices[4].display_name + " " + result.prices[4].estimate);
+                  $('#price6').html(result.prices[5].display_name + " " + result.prices[5].estimate);
+              }
+    
   });
 }
 
